@@ -30,6 +30,16 @@
                 </a>
             @endauth
         </p>
+        <p class="navbar-item">
+            ｜
+        </p>
+        <p class="navbar-item">
+            @auth
+                <a class="title is-5 {{ request()->routeIs('notes.create') ? 'is-active' : '' }}" href="{{route('notes.create')}}">
+                    Note
+                </a>
+            @endauth
+        </p>
     </div>
     <div class="navbar-end">
         <div class="navbar-item">
