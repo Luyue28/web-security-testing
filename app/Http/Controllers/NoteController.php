@@ -70,7 +70,7 @@ class NoteController extends Controller
 
         $note->save();
 
-        return redirect()->route('notes.create', $note)->with('success', 'Note successfully updated');
+        return redirect()->route('notes.create')->with('success', 'Note successfully updated');
     }
 
     public function delete(Note $note)
@@ -85,6 +85,6 @@ class NoteController extends Controller
     {
         $note->delete();
 
-        return redirect()->route('notes.create', $note)->with('success', 'Note successfully deleted');
+        return redirect()->route('notes.create')->with('success', 'Note successfully deleted');
     }
 }

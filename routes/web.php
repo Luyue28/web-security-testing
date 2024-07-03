@@ -16,6 +16,7 @@ Route::get('/form', [App\Http\Controllers\StudentController::class, 'form'])->na
 Route::post('/submit', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
 
 Route::resource('/notes', NoteController::class);
+Route::delete('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy');
 Route::get('/notes/delete/{note}', [\App\Http\Controllers\NoteController::class, 'delete'])->name('notes.delete');
 
 Route::get('/dashboard', function () {
